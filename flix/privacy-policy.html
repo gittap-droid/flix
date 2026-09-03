@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flix Data Practices</title>
+  <style>
+    :root {
+      --ink: #1f1214;
+      --muted: #634248;
+      --accent: #e04343;
+      --deep: #961c2a;
+      --fog: #ead9da;
+      --card: rgba(255, 252, 252, 0.92);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background-color: #e8d4d5;
+      background-image:
+        linear-gradient(165deg, rgba(224, 67, 67, 0.22) 0%, rgba(150, 28, 42, 0.08) 38%, #f6eeee 72%),
+        linear-gradient(90deg, #f3e4e5 0%, #f7f0f0 100%);
+      line-height: 1.75;
+    }
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 32px 18px 80px;
+    }
+    .hero {
+      background: var(--card);
+      border: 1px solid rgba(150, 28, 42, 0.16);
+      padding: 26px 24px 22px;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 1.85rem;
+      color: var(--deep);
+      letter-spacing: -0.02em;
+    }
+    .hero p { margin: 0; color: var(--muted); }
+    .chip {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 10px;
+      background: var(--deep);
+      color: #fff7f7;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 1.16rem;
+      color: var(--deep);
+      margin: 30px 0 10px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(150, 28, 42, 0.12);
+    }
+    h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 14px; padding-left: 1.2rem; }
+    li { margin: 0 0 8px; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 0 0 16px;
+    }
+    .tile {
+      background: var(--card);
+      border: 1px solid rgba(224, 67, 67, 0.14);
+      padding: 14px 16px;
+    }
+    .tile strong {
+      display: block;
+      color: var(--deep);
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+    .tile p { margin: 0; font-size: 0.94rem; color: var(--muted); }
+    .close {
+      margin-top: 36px;
+      background: linear-gradient(90deg, var(--deep), #c5363c);
+      color: #fff8f8;
+      padding: 20px 18px;
+    }
+    .close p { margin: 0 0 10px; }
+    .close a { color: #ffd2d0; }
+    .foot {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    a { color: var(--accent); }
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      .hero h1 { font-size: 2.05rem; }
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 20px 14px 64px; }
+      .hero { padding: 20px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>What Flix keeps beside your swatches</h1>
+      <p>This notice describes how the Flix nail DIY archive handles photographs, workshop notes, device permissions, and on-device files. Flix does not require you to create a remote identity. You can use Compare Bay, Wear Vault, Recipe Bench, Nail Studio, and the workspace desk without registering or signing in.</p>
+      <span class="chip">On-device atelier</span>
+    </div>
+
+    <h2>How this notice fits the Flix workspace</h2>
+    <p>Flix is a handheld log for gel DIY: dual-slot swatch and on-nail pairs, wear-session covers and fail reviews, layered recipes, colorway codes, bottle shelf dates, and drawings made on plate photographs in Nail Studio. Most of what you see is content you supplied or sample plates shipped in the App. We wrote this notice to match those flows rather than a generic cloud product.</p>
+    <p>We do not claim that Flix processes no data at all. An archive that stores images and notes necessarily holds information on the device. The sections below separate what you author, what the system may ask permission to reach, and what may be handled by the operating system rather than by a Flix-operated website.</p>
+
+    <h2>Records you place in dual slots, wear logs, and recipe stacks</h2>
+    <p>When you build a Compare Bay record, Flix may store a title, a swatch image file, an on-nail image file, difference notes, marks for color, thickness, gloss, and cat-eye shift, style, season, and occasion tags, creation time, and an optional link to a recipe identifier.</p>
+    <p>When you build a Wear Vault record, Flix may store a title, a cover image, the date you associate with putting a set on, days worn, chip or lift notes, removal notes, whether the entry is flagged as a fail review, fail-reason labels, a storage-spot note, tags, and creation time.</p>
+    <p>When you use Recipe Bench, Flix may store recipe titles and covers, base, color, effect, and top-coat text, cure seconds per layer, recipe notes, colorway names and brand codes, bottle names, brands, shade codes, quantities, expiry dates, and inventory notes.</p>
+    <p>On the workspace desk you may store a display name, a short tagline, a default season filter for Compare Bay, a preference to open Wear Vault on fails-only, and a preference for recipe shelf alerts. Those fields are local captions and viewing switches. They are not a networked identity.</p>
+    <p>Nail Studio may produce a drawing that you export into a dual-slot record. First-run sample entries may appear so the vault is not empty; those samples use bundled images, not your camera roll.</p>
+
+    <div class="grid">
+      <div class="tile">
+        <strong>Images</strong>
+        <p>Imported or exported pictures are copied as JPEG files into an on-device folder and referenced by a relative path inside Flix.</p>
+      </div>
+      <div class="tile">
+        <strong>Workshop text</strong>
+        <p>Titles, notes, tags, cure seconds, fail labels, and shelf figures are stored with the related record on this device.</p>
+      </div>
+      <div class="tile">
+        <strong>Device and technical details</strong>
+        <p>The operating system may associate the App with ordinary install identifiers, permission states, and crash or diagnostic data under platform rules.</p>
+      </div>
+      <div class="tile">
+        <strong>Tracking choice</strong>
+        <p>At launch, Flix may present the system tracking prompt. If you allow it, we may use a system device identifier with anonymized signals about which archive areas you open, which filters you apply, and whether a dual-slot, wear log, or recipe record is saved, so we can improve dual-slot proofs, wear-log insights, and gel recipes. We do not sell your nail photographs.</p>
+      </div>
+    </div>
+
+    <h2>Why those records exist on the device</h2>
+    <p>Dual-slot files exist so you can compare a swatch plate with an on-nail result. Wear files exist so you can recall longevity, storage, and fail patterns. Recipe and inventory files exist so you can reuse layer stacks and watch bottle dates. Desk labels exist so lists can open on a season or fails-only filter you chose. Nail Studio exports exist so a painted plate can become one side of a comparison.</p>
+    <p>Permission dialogs exist so the system can gate camera, library, microphone, and tracking access. Diagnostic data processed by the operating system exists to keep the software running on a range of devices. We process this information to operate the archive you requested, to remember your local preferences, to respond to written inquiries you send us, and to meet applicable laws and relevant regulatory requirements.</p>
+
+    <h2>System permissions you may see</h2>
+    <p>iOS may show Flix-specific explanations before a permission is granted. You can refuse a permission. Refusing camera access does not prevent you from importing existing pictures where the photo picker remains available. Refusing microphone access means you can still save silent photographs to the archive. Refusing tracking means Flix will not use a system device identifier for the improvement purposes described above.</p>
+    <ul>
+      <li>Camera: intended so you can photograph gel swatches, on-nail try-ons, wear-session covers, and recipe stack photos for the local archive. Flix does not need the camera to stay on after you leave a capture flow.</li>
+      <li>Photo library: intended so you can import swatch plates, on-nail photographs, wear-log covers, and recipe images. Chosen pictures are copied into Flix's on-device media folder. Flix does not browse your album in the background or hand those photos to other companies as a product feature.</li>
+      <li>Microphone: intended only if you capture a live clip of a swatch, on-nail try-on, or wear-session review so spoken notes can sit with that record on this device. Audio is not recorded in the background and is not sent to other apps.</li>
+      <li>Tracking: intended so that, if you allow it, a system device identifier may be combined with anonymized archive-screen events to improve Compare Bay, Wear Vault, and Recipe Bench. You can change this later in system settings.</li>
+    </ul>
+    <p>The system photo picker may let you select an image with limited library access. That is a platform control, not a Flix-operated gallery of your entire roll.</p>
+
+    <h2>What stays in on-device storage</h2>
+    <p>Archive JSON-style records and preference values are kept using the App's local storage on the handset. Image files you import or export are written under a relative media folder inside the App's documents area so paths remain valid if the container moves on the same device. Flix is built around that local vault rather than a Flix-hosted customer database.</p>
+    <p>If you use operating-system backups, copies of documents and local settings may be included in those backups according to the backup provider. We do not control how long a backup vendor retains a snapshot.</p>
+
+    <h2>Signals that may leave the handset</h2>
+    <p>Flix does not run its own content cloud for uploading your dual-slot pairs, wear covers, or recipes to a Flix server as a sync product. Your workshop files are meant to remain on the device unless you move them yourself or a system backup copies them.</p>
+    <p>The operating system and Apple frameworks may still exchange technical information with Apple when you use ordinary device services or permission prompts. Those transfers follow Apple's rules, not a separate Flix profile store. We do not describe Flix as a service that streams your nail photographs to unrelated companies.</p>
+    <p>If you email us, the message content, your address, and any attachments you include will be processed to read and reply. That correspondence lives in our mail channel, not inside the on-device vault.</p>
+
+    <h2>Parties other than Flix</h2>
+    <p>Apple provides the operating system, permission interfaces, photo selection interfaces, and related frameworks. Their handling of technical data is described in Apple's own notices. We do not list a social network or a third-party measurement pixel as part of Flix's archive design.</p>
+    <p>If a future version adds a new processor that receives personal data, we will update this notice before that processing becomes part of the product, except where applicable laws allow a different timing.</p>
+
+    <h2>The care we apply to stored files</h2>
+    <p>We rely on device lock, operating-system sandboxing, and ordinary file protections to reduce casual access to the local vault. You can add your own device passcode or biometric lock. No method of storage is free of risk. We do not promise that a determined actor, a lost unlocked phone, a corrupted backup, or a platform vulnerability cannot expose files. If we become aware of a security issue that requires user notice under applicable laws, we will provide that notice in a timely and lawful way.</p>
+
+    <h2>How long entries remain</h2>
+    <p>Compare Bay, Wear Vault, and Recipe Bench records remain until you edit or delete them, or until the App and its local files are removed from the device. Preference values remain until you change them or remove the App. Tracking authorization state is remembered so the system prompt is not repeated after you have decided, subject to system resets.</p>
+    <p>Email you send to us is kept only as long as needed to handle the request and to meet applicable laws. We do not operate a remote purge button for an identity Flix does not require. Deleting the App is the primary way to clear the local archive on that installation.</p>
+
+    <h2>Choices you can make without creating an identity</h2>
+    <p>You may decline optional permissions, change tracking in system settings, delete individual records in the App, replace desk labels, turn shelf alerts on or off, and remove the App. Because there is no mandatory remote identity, there is no remote sign-in to revoke and no password file for us to reset.</p>
+    <p>If you believe a copy of your correspondence sits in our mailbox and you want it reviewed, write to <a href="mailto:maeve.lintel@gelhearth.studio">maeve.lintel@gelhearth.studio</a> from the same address you used, so we can locate the thread. We will handle requests in line with applicable laws.</p>
+
+    <h2>Younger users</h2>
+    <p>Flix is aimed at people who can keep a personal workshop log under applicable laws. It is not directed at children who are too young to use such an App under those laws. We do not knowingly seek personal information from such children. If you are a parent or guardian and you think a child has stored photographs or notes in Flix in a way that should be removed, write to <a href="mailto:maeve.lintel@gelhearth.studio">maeve.lintel@gelhearth.studio</a> and we will take reasonable steps consistent with applicable laws.</p>
+
+    <h2>When this notice is revised</h2>
+    <p>If we change how the archive handles data, we will update this page. Material changes will be made available in a reasonable way, such as through an in-App presentation or a replaced document. You should read the current text when it is offered. Where applicable laws require consent for a new purpose, we will request it.</p>
+
+    <div class="close">
+      <p>This notice takes effect on September 3, 2026. It describes Flix as a local nail DIY archive and does not create rights beyond applicable laws.</p>
+      <p>Write to <a href="mailto:maeve.lintel@gelhearth.studio">maeve.lintel@gelhearth.studio</a> if you have a question about these practices. Use the same address that appears in the Flix terms. Please mention whether your question concerns a photograph, a wear log, a recipe field, a permission dialog, or mail we already received, so we can answer with the correct file type in mind.</p>
+    </div>
+    <p class="foot">Flix processes workshop records to run the archive you use on the device. We avoid absolute claims about leakage or sharing because those events cannot be guaranteed never to occur.</p>
+  </div>
+</body>
+</html>
